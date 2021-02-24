@@ -50,7 +50,7 @@ class ProductsActionPage extends Component {
             })
             
         }
-        else {
+        else { 
 
             var { name, description, price, status } = this.state;
             callApi('POST', 'http://localhost:3000/items', {
@@ -77,7 +77,7 @@ class ProductsActionPage extends Component {
              'description': item.description,
              'price': item.price,
              'status': item.status
-         })
+         }) 
          console.log('didmount')
      } */
     componentDidMount() {

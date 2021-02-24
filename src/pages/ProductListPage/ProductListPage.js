@@ -13,19 +13,17 @@ import {Action_Fetch_API,Fetch_API} from './../../Redux-action/actions.js'
 class ProductListPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state ={
             products: []
         };
     }
     componentDidMount() {
         console.log("bat dau dispatch");
         console.log(this.props);
-        // this.props.getData();
         this.props.getData();
          console.log("end dispatch");
     }
 
-// vậy đó a, nó chạy đc nhưng ko render đc sản phẩm //  em log ra dât thu xem, e log rồi mà
     /* getId =(id)=>{
        console.log(`id lấy được là ${id}`);
        this.state.products.forEach((product,index) =>{
@@ -55,7 +53,7 @@ class ProductListPage extends Component {
                 }
                 else{
                     console.log(tmp);
-                }
+                }   
             }
         });
     }
@@ -115,4 +113,5 @@ const mapStateToProps = (state) => {
     }
 } 
 export default connect(mapStateToProps,mapDispatchToProps)(ProductListPage)
+
 
